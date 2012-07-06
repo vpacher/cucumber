@@ -59,10 +59,10 @@ module Cucumber
     end
 
     it "should format groups even when first group is optional and not matched" do
-      pending_under :java, "requires cucumber/gherkin >= ac42f51" do
+      # pending_under :java, "requires cucumber/gherkin >= ac42f51" do
         m = step_match(/should( not)? be flashed '([^']*?)'$/, "I should be flashed 'Login failed.'")
         m.format_args("<span>%s</span>").should == "I should be flashed '<span>Login failed.</span>'"
-      end
+      # end
     end
 
     it "should format embedded groups" do
